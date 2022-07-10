@@ -16,7 +16,7 @@ class Routes {
     router.define(home, handler: homeHandler);
     router.define(artists,
         handler: artistsHandler, transitionType: TransitionType.fadeIn);
-    router.define('${about}/:artist',
-        handler: aboutHandler, transitionType: TransitionType.inFromLeft);
+    router.define('${about}/:artist/:about',
+        handler: aboutHandler, transitionType: TransitionType.inFromRight);
   }
 }

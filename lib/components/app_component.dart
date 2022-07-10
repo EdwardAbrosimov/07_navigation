@@ -1,4 +1,3 @@
-import 'package:albums_route/config/arttists.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,6 @@ class _AppComponentState extends State<AppComponent> {
     final router = FluroRouter();
     Routes.configureRoutes(router);
     Application.router = router;
-    Artists artists = Artists();
   }
   @override
   Widget build(BuildContext context) {

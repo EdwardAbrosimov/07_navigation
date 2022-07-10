@@ -18,6 +18,9 @@ var artistsHandler = Handler(
 
 var aboutHandler = Handler(
   handlerFunc: (BuildContext context, Map<String, dynamic> parameters) {
-    return AboutPage();
+    return AboutPage(
+      artist: parameters['artist'][0],
+      about: parameters['about'][0],
+    );
   },
 );
