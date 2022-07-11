@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatefulWidget {
-  const AboutPage({Key key, this.artist, this.about}) : super(key: key);
+  const AboutPage({super.key, required this.artist, required this.about});
   final String artist;
   final String about;
   @override
@@ -18,7 +18,7 @@ class _AboutPageState extends State<AboutPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Expanded(child: Text(widget.about)),
+        child: Text(widget.about),
       ),
     );
   }

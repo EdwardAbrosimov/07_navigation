@@ -5,19 +5,19 @@ import '../components/home_component.dart';
 import '../components/artist_component.dart';
 
 var homeHandler = Handler(
-  handlerFunc: (BuildContext context, Map<String, dynamic> parameters) {
-    return HomePage();
+  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
+    return const HomePage();
   },
 );
 
 var artistsHandler = Handler(
-  handlerFunc: (BuildContext context, Map<String, dynamic> parameters) {
-    return ArtistsPage();
+  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
+    return const ArtistsPage();
   },
 );
 
 var aboutHandler = Handler(
-  handlerFunc: (BuildContext context, Map<String, dynamic> parameters) {
+  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
     return AboutPage(
       artist: parameters['artist'][0],
       about: parameters['about'][0],

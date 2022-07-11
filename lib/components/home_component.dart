@@ -2,7 +2,7 @@ import 'package:albums_route/config/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         child: ListView(
           addAutomaticKeepAlives: true,
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           children: [
             ListTile(
               leading: const Icon(Icons.home),
