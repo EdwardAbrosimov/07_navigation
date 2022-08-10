@@ -6,9 +6,6 @@ class AboutPage extends StatelessWidget {
   final String info;
   @override
   Widget build(BuildContext context) {
-    debugPrint(artist);
-    // debugPrint(info);
-
     return Scaffold(
       appBar: AppBar(
         title: Text(artist),

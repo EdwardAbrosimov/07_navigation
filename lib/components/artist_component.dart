@@ -1,3 +1,4 @@
+import 'package:albums_route/config/route_handlers.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:albums_route/config/routes.dart';
@@ -43,10 +44,9 @@ class _ArtistsPageState extends State<ArtistsPage> {
                   trailing: const Icon(Icons.arrow_forward_outlined),
                   title: Text(_artists[index]['name']),
                   onTap: () {
-                    debugPrint(
-                        '${Routes.about}/${_artists[index]['name']}/${_artists[index]['about']}');
-                    Navigator.of(context).pushNamed(
-                        '${Routes.about}/${_artists[index]['name']}/${_artists[index]['about']}');
+                    Navigator.of(context).pushNamed(Routes.about,
+                        arguments: AboutArguments(
+                            _artists[index]['name'], _artists[index]['about']));
                   },
                 );
               })

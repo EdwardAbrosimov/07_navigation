@@ -16,13 +16,19 @@ var artistsHandler = Handler(
   },
 );
 
+class AboutArguments {
+  final String artist;
+  final String info;
+
+  AboutArguments(this.artist, this.info);
+}
+
 var aboutHandler = Handler(
   handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
-    String? artist = params["artist"]?.first;
-    String? info = params["info"]?.first;
+    final args = ModalRoute.of(context!)?.settings.arguments as AboutArguments;
     return AboutPage(
-      artist: artist ?? 'Unknown',
-      info: info ?? 'Unknown',
+      artist: args.artist,
+      info: args.info,
     );
   },
 );
