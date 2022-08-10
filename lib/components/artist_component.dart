@@ -43,6 +43,8 @@ class _ArtistsPageState extends State<ArtistsPage> {
                   trailing: const Icon(Icons.arrow_forward_outlined),
                   title: Text(_artists[index]['name']),
                   onTap: () {
+                    debugPrint(
+                        '${Routes.about}/${_artists[index]['name']}/${_artists[index]['about']}');
                     Navigator.of(context).pushNamed(
                         '${Routes.about}/${_artists[index]['name']}/${_artists[index]['about']}');
                   },

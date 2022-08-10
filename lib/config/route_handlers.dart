@@ -5,22 +5,24 @@ import '../components/home_component.dart';
 import '../components/artist_component.dart';
 
 var homeHandler = Handler(
-  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
+  handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
     return const HomePage();
   },
 );
 
 var artistsHandler = Handler(
-  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
+  handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
     return const ArtistsPage();
   },
 );
 
 var aboutHandler = Handler(
-  handlerFunc: (BuildContext? context, Map<String, dynamic> parameters) {
+  handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+    String? artist = params["artist"]?.first;
+    String? info = params["info"]?.first;
     return AboutPage(
-      artist: parameters['artist'][0],
-      about: parameters['about'][0],
+      artist: artist ?? 'Unknown',
+      info: info ?? 'Unknown',
     );
   },
 );
